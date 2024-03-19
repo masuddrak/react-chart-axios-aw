@@ -13,7 +13,7 @@ const Navber = () => {
         { path: "*", name: "NotFound", id: 5 } // "*" represents any unmatched path
     ];
 const [open,setOpen]=useState(false)
-console.log(open)
+// console.log(open)
     return (
         <nav className="p-4 md:p-0">
             <div className="md:hidden" onClick={()=>setOpen(!open)}>
@@ -22,7 +22,7 @@ console.log(open)
                 }
                 
             </div>
-            <ul className={`md:flex gap-10 absolute md:static bg-slate-500 duration-1000 w-1/2  md:w-full ${open?"top-16":"-top-60"}`}>
+            <ul className={`md:flex gap-10 p-6 absolute md:static bg-slate-500 duration-1000 w-1/2  md:w-full ${open?"top-16":"-top-60"}`}>
                 {
                     routes.map(route => <Links key={route.id} route={route}></Links>)
                 }
